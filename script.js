@@ -18,7 +18,10 @@ let startScreen = id("startScreen"),
    var screen = false;
 
    let namePlayer = "";
-   
+//    sound audio creating
+
+    let gameSound = new Audio("sounds/game-audio.mpeg");
+    let clickSound = new Audio("sounds/click-audio.aac");
 
    let computerImage = ["robot-1.webp","robot-2.jfif","robot-3.webp","robot-4.jpeg"];
  
@@ -48,6 +51,7 @@ playBtn.addEventListener("click", function(){
         startScreen.style = "display:none";
         secondScreen.style = "display:flex";
 
+    gameSound.play();
         
     Pname.innerText = namePlayer.toUpperCase();
 
@@ -87,6 +91,8 @@ toolButtons.forEach(function(button){
 
     button.addEventListener("click", function(){
 
+        clickSound.play();
+        
         let userIn = button.getAttribute("data-choice");
 
         let computerChooseNumber = Math.floor(Math.random() * tools.length);
