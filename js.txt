@@ -1,0 +1,36 @@
+const container = document.getElementsByClassName("container")[0];
+let tools = ["strone","paper","scissor"];
+console.log(tools.length);
+
+let play = true;
+
+let winCount = 0,
+    lossCount = 0;
+    
+
+    while(play){
+        for(i=1;i<=3;i++){
+            let computerChoose = tools[Math.floor(Math.random()*tools.length)];
+       
+            const userIn = prompt("Enter your option = strone , paper ,scissor").trim().toLowerCase();
+
+            console.log(userIn);
+            
+            if(userIn==computerChoose){
+                alert("Match Draw");
+            }else if(userIn == "scissor" && computerChoose == "paper" || 
+                     userIn == "paper" && computerChoose == "stone" ||
+                     userIn == "stone" && computerChoose == "scissor"){  
+
+                        winCount++
+            }else{
+                lossCount++
+            }
+        }
+            play = false;
+        console.log("Win Count = "+winCount);
+        console.log("loss Count = "+lossCount);
+
+        
+
+    }

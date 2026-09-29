@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#startScreen,.secondScreen{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(43deg ,purple,lightpink);
+    /* position: absolute; */
+}
+#startScreen{
+    display: flex;
+}
+.userImage{
+    width: 270px;
+    height: 300px;
+    background-image: linear-gradient(210deg,gray,rgb(182, 170, 170));
+    border-radius: 10px;
+    border: 3px solid purple;
+}
+.uploadBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 900;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#playBtn{
+    color: purple;
+    border: none;
+    font-weight: 900;
+    font-size: 17px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 5px double purple;
+    cursor: pointer;
+}
+#playBtn:active{
+    transform: scale(0.9);
+}
+.pName{
+    padding: 6px;
+    font-weight: 700;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+.nameE{
+    position: relative;
+}
+/* second screen */
+#secondScreen{
+    display: none;
+}
+.Pname{
+    position: absolute;
+    top: -365px;
+    text-shadow: 0 0 6px whitesmoke;
+    color: rgb(95, 9, 95);
+}
+.Cname{
+    position: absolute;
+    top: -40px;
+    text-shadow: 0 0 6px whitesmoke;
+    color: rgb(95, 9, 95);
+}
+.computer{
+    position: relative;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.vs{
+    width: 200px;
+    height: 150px;
+}
+.player{
+    position: relative;
+}
+.controlContainer{
+    position: absolute;
+    bottom: -100px;
+    right: 10px;
+}
+.controls img{
+    width: 70px;
+    height: 70px;
+}
+.controls button{
+    background-color: rgb(94, 94, 95);
+    border: none;
+    border-radius: 8px;
+    border: 2px double purple;
+    box-shadow: 0 0 7px;
+    cursor: pointer;
+}
+.controls button:active{
+    transform: scale(0.9);
+}
+.controls button:focus{
+    background-color: rgb(134, 67, 67);
+}
+.controls{
+    display: flex;
+    gap: 15px;
+}
+.comp-control{
+    position: absolute;
+    bottom: -100px;
+    right: 6px;
+}
+.resetHome{
+    display: flex;
+    gap: 10px;
+}
+.btn{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    box-shadow: 3px 3px 7px black;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.reset{
+    background-image: linear-gradient(143deg,rgb(240, 95, 95),red)
+}
+.home{
+    background-image: linear-gradient(143deg,lightgreen,green);
+}
+.pDetaile{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.score-board{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media screen and (max-width:750px) {
+    .userImage{
+    width: 170px;
+    height: 200px;  
+    }
+    .vs{
+    width: 120px;
+    height: 100px;
+    }
+    .controls img{
+    width: 40px;
+    height: 40px;
+}
+.comp-control{
+    bottom: -60px;
+}
+.controlContainer{
+    bottom: -60px;
+}
+.Pname{
+    top: -255px;
+}
+.pDetaile{
+    position: relative;
+    bottom: -80px;
+    font-size: small;
+    gap: 0;
+    align-items: center;
+}
+.resetHome{
+    margin-top: 20px;
+    flex-direction: column;
+    position: relative;
+    top: -10px;
+}
+.score{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    flex-direction: row;
+}
+.score-board{
+    width: 150px;
+    gap: 10px;
+}
+}
+
+@media screen and (max-width:494px) {
+    .userImage{
+    width: 130px;
+    height: 190px;  
+    }
+    .vs{
+    width: 100px;
+    height: 90px;
+    }
+    .controls img{
+    width: 30px;
+    height: 40px;
+}
+.controls{
+    gap: 7px;
+}
+.pDetaile{
+    font-size: small;
+    position: relative;
+    bottom: -19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 160px;
+    margin-top: 50px;
+}
+.Pname{
+    width: 130px ;
+    top: -234px;
+    font-size: large;
+    text-align: center;
+}
+.Cname{
+    width: 130px;
+    font-size: large;
+    text-align: center;
+    top: -30px;
+    right: -3px;
+}
+}

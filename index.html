@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- starting pleace -->
+    <section id="startScreen">
+        <h1>Stone Paper Scisser</h1>
+        <div class="uploadBox">
+            <img src="" alt="" id="previewImage" class="userImage">
+            <p id="yourImageText">Your Image</p>
+            <input type="file" id="imageInput" accept="image/*">
+            <div class="nameE">
+                <label for="">Player Name :</label>
+                <input type="text" placeholder="Abcdef" id="playerName" name="playerName" class="pName" >
+                <h1 id="errorMsg"></h1>
+            </div>
+            <button id="playBtn">PLAY</button>
+        </div>
+    </section>
+    <!-- game playing places -->
+    <section id="secondScreen" class="secondScreen" >
+        <div class="container">
+            <!-- Player area -->
+            <div class="player">
+                <img src="" alt="" id="playerImage" class="userImage">
+                <div class="controlContainer">
+                    <h1 id="Pname" class="Pname"></h1>
+                    <div class="controls">
+                        <button class="tool" data-choice = "stone"><img src="stone.png" alt="stoneImage"></button>
+                        <button class="tool" data-choice = "paper"><img src="paper.png" alt="paper"></button>
+                        <button class="tool" data-choice = "scisser"><img src="scisser.png" alt="scisser"></button>
+                    </div>
+                </div>
+            </div>
+            <img src="vs.png" alt="vs" class="vs">
+            <div class="computer">
+                <img src="" alt="" class="userImage" id="compImage">
+                <h1 class="Cname" id="CName">COMPUTER</h1>
+                <div class="controls comp-control">
+                        <button class="c-tools"><img src="stone.png" alt="stoneImage"></button>
+                        <button class="c-tools"><img src="paper.png" alt="paper"></button>
+                        <button class="c-tools"><img src="scisser.png" alt="scisser"></button>
+                 </div>
+            </div>
+        </div>
+        <div class="pDetaile">
+            <h1>Score card</h1>
+            <div class="score">
+                <div class="score-board">
+                    <h3 id="win">WIN Count : 0</h3>
+                    <h3 id="loss">LOSS Count : 0</h3>
+                    <h3 id="draw">DRAW Count : 0</h3>
+                </div>
+                <div class="resetHome">
+                    <button onclick="reset()" class="reset btn">Reset</button>
+                    <button onclick="home()" class="home btn">Exit</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
