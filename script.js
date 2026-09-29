@@ -168,10 +168,12 @@ function reset(){
 function home(){
 
     reset();
-    clickSound.pause();
+    gameSound.pause();
     screen = false;
 
     previewImage.src = "";
+
+    yourImageText.innerText = "Your Image";
 
     playerName.value = "";
      secondScreen.style.display = "none";
